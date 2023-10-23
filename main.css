@@ -1,0 +1,778 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-image: url("https://g.foolcdn.com/editorial/images/457552/salmon_salad.jpg");
+  background-size: cover;
+  width: 100%;
+  background-color: black;
+  color: white;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+}
+header nav h1 {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+header nav ul li {
+  font-size: 17px;
+  color: white;
+  cursor: pointer;
+}
+header nav ul li:hover {
+  color: chocolate;
+  cursor: pointer;
+}
+header nav i {
+  display: none;
+  font-size: 30px;
+  color: white;
+}
+header .head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .head .food {
+  width: 50%;
+  padding: 300px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+header .head .food h1 {
+  font-size: 70px;
+}
+header .head .food .start {
+  width: 150px;
+  padding: 10px;
+  font-size: 17px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+header .head .food .start a {
+  text-decoration: none;
+  color: white;
+}
+
+section {
+  width: 100%;
+  padding: 200px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+section .sec-a {
+  width: 40%;
+  height: 350px;
+}
+section .sec-a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section .sec-b {
+  padding: 20px 0;
+  width: 30%;
+  /* background-color: antiquewhite;*/
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+section .sec-b .xett {
+  width: 100px;
+  height: 2px;
+  background-color: chocolate;
+}
+section .sec-b h1 {
+  font-size: 50px;
+}
+section .sec-b p {
+  font-size: 17px;
+  color: rgb(190, 186, 186);
+}
+section .sec-b .imge {
+  width: 100px;
+  height: 100px;
+}
+section .sec-b .imge img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main {
+  width: 100%;
+  padding: 300px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+}
+main .main-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+  gap: 20px;
+}
+main .main-a .xett {
+  width: 100px;
+  height: 2px;
+  background-color: chocolate;
+}
+main .main-a h1 {
+  font-size: 50px;
+}
+main .main-a p {
+  font-size: 17px;
+  color: rgb(190, 186, 186);
+}
+main .main-b {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+main .main-b .main3 {
+  width: 31%;
+  height: 550px;
+}
+main .main-b .main3 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 300px 0;
+  gap: 100px;
+}
+.menu .menu-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu .menu-a .xett {
+  width: 100px;
+  height: 2px;
+  background-color: chocolate;
+}
+.menu .menu-a h1 {
+  font-size: 50px;
+}
+.menu .menu-b {
+  width: 100%;
+  /* @include flex-nav;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+.menu .menu-b .menu1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 32%;
+  height: 700px;
+  background-image: url("https://preview.colorlib.com/theme/gourmet/img/dishes_2.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  opacity: 0.7;
+  transition: width 1s, height 1s;
+}
+.menu .menu-b .menu1:hover {
+  width: 33%;
+  height: 720px;
+}
+.menu .menu-b .menu1 h1 {
+  font-size: 50px;
+  color: black;
+}
+.menu .menu-b .menu1 h2 {
+  font-size: 30px;
+  color: black;
+}
+.menu .menu-b .menu2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 32%;
+  height: 700px;
+  background-image: url("https://preview.colorlib.com/theme/gourmet/img/dishes_1.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  opacity: 0.7;
+  transition: width 1s, height 1s;
+}
+.menu .menu-b .menu2:hover {
+  width: 33%;
+  height: 720px;
+}
+.menu .menu-b .menu2 h1 {
+  font-size: 50px;
+  color: black;
+}
+.menu .menu-b .menu2 h2 {
+  font-size: 30px;
+  color: black;
+}
+.menu .menu-b .menu3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 32%;
+  height: 700px;
+  background-image: url("https://preview.colorlib.com/theme/gourmet/img/dishes_3.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  opacity: 0.7;
+  transition: width 1s, height 1s;
+}
+.menu .menu-b .menu3:hover {
+  width: 33%;
+  height: 720px;
+}
+.menu .menu-b .menu3 h1 {
+  font-size: 50px;
+  color: black;
+}
+.menu .menu-b .menu3 h2 {
+  font-size: 30px;
+  color: black;
+}
+
+.grid {
+  padding: 300px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+}
+.grid .div-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.grid .div-a .xett {
+  width: 100px;
+  height: 2px;
+  background-color: chocolate;
+}
+.grid .div-a h1 {
+  font-size: 50px;
+}
+.grid .grid-a {
+  width: 67%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid .grid-a .grid-i {
+  width: 250px;
+  height: 250px;
+}
+.grid .grid-a .grid-i img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.grid .grid-a .grid-b {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+}
+.grid .grid-a .grid-b h3 {
+  font-size: 21px;
+}
+.grid .grid-a .grid-b p {
+  font-size: 17px;
+  color: rgb(190, 186, 186);
+}
+.grid .grid-a .grid-b h1 {
+  font-size: 30px;
+  color: chocolate;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+  padding: 300px 0;
+}
+.container .con-a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .con-a .xett {
+  width: 100px;
+  height: 2px;
+  background-color: chocolate;
+}
+.container .con-a h1 {
+  font-size: 50px;
+}
+.container .con-b {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.container .con-b p {
+  font-size: 21px;
+}
+.container .con-b .ima {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.container .con-b .ima .ima-1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.container .con-b .ima .ima-1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.container .con-b .ima .ima-2 {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .con-b .ima .ima-2 h1 {
+  font-size: 20px;
+}
+
+.blog {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 300px 0;
+  gap: 100px;
+}
+.blog .blog-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.blog .blog-a .xett {
+  width: 100px;
+  height: 2px;
+  background-color: chocolate;
+}
+.blog .blog-a h1 {
+  font-size: 50px;
+}
+.blog .blog-b {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.blog .blog-b .blog-1 {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blog .blog-b .blog-1 .ime1 {
+  width: 100%;
+  height: 300px;
+}
+.blog .blog-b .blog-1 .ime1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog .blog-b .blog-1 .ime2 {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.blog .blog-b .blog-1 .ime2 h1 {
+  font-size: 21px;
+  color: chocolate;
+}
+.blog .blog-b .blog-1 .ime2 .p1 {
+  color: rgb(190, 186, 186);
+  font-size: 15px;
+}
+.blog .blog-b .blog-1 .ime2 p {
+  font-size: 17px;
+  color: rgb(190, 186, 186);
+}
+.blog .blog-b .blog-1 .but {
+  width: 100px;
+  padding: 10px;
+  background-color: chocolate;
+  color: white;
+  font-size: 13px;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 100px 0;
+}
+.info .info-a {
+  width: 70%;
+  display: flex;
+  gap: 37px;
+}
+.info .info-a .info1 {
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info .info-a .info1 h3 {
+  font-size: 20px;
+}
+.info .info-a .info1 p {
+  font-size: 17px;
+  color: rgb(190, 186, 186);
+}
+.info .info-a .info1 .p2 {
+  font-size: 19px;
+  color: black;
+}
+.info .info-a .info1 .p3 a {
+  text-decoration: none;
+  color: chocolate;
+}
+
+footer {
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer p {
+  font-size: 17px;
+  color: rgb(190, 186, 186);
+}
+footer p a {
+  text-decoration: none;
+  color: chocolate;
+}
+
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  footer {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .info {
+    width: 100%;
+  }
+  .info .info-a {
+    width: 100%;
+  }
+  .info .info-a .info1 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .info {
+    width: 100%;
+  }
+  .info .info-a {
+    width: 100%;
+    flex-direction: column;
+  }
+  .info .info-a .info1 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .blog {
+    width: 100%;
+  }
+  .blog .blog-a {
+    width: 100%;
+  }
+  .blog .blog-b {
+    width: 100%;
+  }
+  .blog .blog-b .blog-1 {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .blog {
+    width: 100%;
+  }
+  .blog .blog-a {
+    width: 100%;
+  }
+  .blog .blog-b {
+    width: 100%;
+    flex-direction: column;
+  }
+  .blog .blog-b .blog-1 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+  .container .con-a {
+    width: 100%;
+  }
+  .container .con-b {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+  .container .con-a {
+    width: 100%;
+  }
+  .container .con-b {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .grid {
+    width: 100%;
+  }
+  .grid .div-a {
+    width: 100%;
+  }
+  .grid .grid-a {
+    width: 70%;
+    flex-wrap: wrap;
+  }
+  .grid .grid-a .grid-b {
+    width: 35%;
+  }
+  .grid .grid-a .grid-i {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .grid {
+    width: 100%;
+  }
+  .grid .div-a {
+    width: 100%;
+  }
+  .grid .grid-a {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .grid .grid-a .grid-b {
+    width: 100%;
+  }
+  .grid .grid-a .grid-i {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .menu {
+    width: 100%;
+  }
+  .menu .menu-a {
+    width: 100%;
+  }
+  .menu .menu-b {
+    gap: 10px;
+  }
+  .menu .menu-b .menu1 {
+    width: 30%;
+  }
+  .menu .menu-b .menu1 {
+    width: 30%;
+  }
+  .menu .menu-b .menu3 {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .menu {
+    width: 100%;
+  }
+  .menu .menu-a {
+    width: 100%;
+  }
+  .menu .menu-b {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .menu .menu-b .menu1 {
+    width: 100%;
+  }
+  .menu .menu-b .menu2 {
+    display: none;
+  }
+  .menu .menu-b .menu3 {
+    display: none;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  main {
+    width: 100%;
+  }
+  main .main-a {
+    width: 50%;
+  }
+  main .main-b {
+    flex-direction: column;
+    gap: 30px;
+  }
+  main .main-b .main3 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  main {
+    width: 100%;
+  }
+  main .main-a {
+    width: 100%;
+  }
+  main .main-b {
+    flex-direction: column;
+    gap: 30px;
+  }
+  main .main-b .main3 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  section {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  section .sec-a {
+    width: 100%;
+  }
+  section .sec-a img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  section .sec-b {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  section {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  section .sec-a {
+    width: 100%;
+  }
+  section .sec-b {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  header {
+    width: 100%;
+  }
+  header nav {
+    width: 100%;
+    background-color: black;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav i {
+    display: flex;
+  }
+  header .head {
+    width: 100%;
+  }
+  header .head .food {
+    width: 100%;
+  }
+  header .head .food h1 {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=main.css.map */
