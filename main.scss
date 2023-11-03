@@ -11,14 +11,18 @@
 header {
 
     background-image: url('https://g.foolcdn.com/editorial/images/457552/salmon_salad.jpg');
-
     background-size: cover;
-
+    background-position: center;
     width: 100%;
     background-color: $b-qara;
-
     color: $ag;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+
+    background-color: rgb(242, 236, 236);
+
+
+
+
 
 
     nav {
@@ -38,7 +42,7 @@ header {
             gap: 20px;
 
             li {
-                font-size: 17px;
+                font-size: 19px;
                 color: white;
                 cursor: pointer;
 
@@ -60,9 +64,10 @@ header {
         width: 100%;
 
         @include flex;
+       
 
         .food {
-            width: 50%;
+            width: 40%;
             padding: 300px 0;
 
             @include flex;
@@ -80,9 +85,18 @@ header {
                 border: 2px solid white;
                 cursor: pointer;
 
+                &:hover {
+                    background-color: $ag ;
+
+                }
+
                 a {
                     text-decoration: none;
                     color: $ag;
+
+                    &:hover {
+                        color: $b-qara;
+                    }
                 }
             }
         }
@@ -100,12 +114,17 @@ section {
     justify-content: center;
     align-items: center;
     gap: 150px;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    margin-top: -200px;
+    //margin-top: -210px;
+    clip-path: polygon(0 14%, 100% 0%, 100% 85%, 0% 100%);
+
+    background-color: rgb(242, 236, 236);
+
 
     .sec-a {
         width: 40%;
         height: 350px;
-    
+
 
         img {
             width: 100%;
@@ -120,10 +139,10 @@ section {
         /* background-color: antiquewhite;*/
         display: flex;
         flex-direction: column;
-        
+
         gap: 20px;
         @include xett;
-     
+
 
         h1 {
             font-size: $font-basliq1 ;
@@ -151,7 +170,7 @@ section {
 
 main {
     width: 100%;
-    padding: 300px 0;
+    padding: 150px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,7 +185,7 @@ main {
         width: 50%;
         text-align: center;
         gap: 20px;
-      @include xett;
+        @include xett;
 
         h1 {
             font-size: $font-basliq1;
@@ -189,12 +208,12 @@ main {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
-       
+
 
         .main3 {
             width: 31%;
             height: 550px;
-            
+
 
             img {
                 width: 100%;
@@ -207,16 +226,17 @@ main {
 
 .menu {
     width: 100%;
-  
+
     @include flex;
-    padding: 300px 0;
+    padding: 200px 0;
     gap: 100px;
 
     .menu-a {
 
         @include flex;
-       gap: 20px;
-       @include xett;
+        gap: 20px;
+        @include xett;
+
         h1 {
             font-size: $font-basliq1;
         }
@@ -225,89 +245,212 @@ main {
 
     .menu-b {
         width: 100%;
-       
-       /* @include flex-nav;*/
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-around;
-       gap:10px;
-       
+
+        /* @include flex-nav;*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+
 
         .menu1 {
-            @include flex;
             width: 32%;
-            height: 700px;
-            
-            background-image: url('https://preview.colorlib.com/theme/gourmet/img/dishes_2.jpg');
-            object-fit: cover;
-            background-position: center;
-            opacity: 0.7;
-            transition: width 1s, height 1s;
-&:hover{
-    width: 33%;
-    height: 720px;
-}
-            h1 {
-                font-size: $font-basliq1;
-                color: $b-qara;
+            position: relative;
+            @include flex;
+
+            .sekil {
+                width: 100%;
+                height: 700px;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all 1s ease;
+                    scale: 1;
+
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: black;
+                    opacity: 0.5;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
+
+                &:hover img {
+                    scale: 1.1;
+                   
+                }
             }
 
-            h2 {
-                font-size: $font-basliq4;
-                color: $b-qara;
+            .yazi {
+                width: 70%;
+                // padding: 30px;
+                // background-color: blue;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+                position: absolute;
+                cursor: pointer;
+                color: $ag;
+                z-index: 2;
+
+                h1 {
+                    font-size: $font-basliq1;
+
+                }
+
+                h2 {
+                    font-size: $font-basliq4;
+
+                }
             }
         }
 
         .menu2 {
-            @include flex;
+
             width: 32%;
-            height: 700px;
-            
-            background-image: url('https://preview.colorlib.com/theme/gourmet/img/dishes_1.jpg');
-            object-fit: cover;
-            background-position: center;
-            opacity: 0.7;
-            transition: width 1s, height 1s;
-            &:hover{
-                width: 33%;
-                height: 720px;
-            }
-            h1 {
-                font-size: $font-basliq1;
-                color: $b-qara;
+            position: relative;
+            @include flex;
+
+            .sekil {
+                width: 100%;
+                height: 700px;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all 1s ease;
+                    scale: 1;
+
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: black;
+                    opacity: 0.5;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
+
+                &:hover img {
+                    scale: 1.1;
+                
+                }
             }
 
-            h2 {
-                font-size: $font-basliq4;
-                color: $b-qara;
+            .yazi {
+                width: 70%;
+                // padding: 30px;
+                // background-color: blue;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+                position: absolute;
+            cursor: pointer;
+                color: $ag;
+                z-index: 2;
+
+                h1 {
+                    font-size: $font-basliq1;
+
+                }
+
+                h2 {
+                    font-size: $font-basliq4;
+
+                }
             }
 
 
         }
 
         .menu3 {
-            @include flex;
             width: 32%;
-            height: 700px;
-          
-            background-image: url('https://preview.colorlib.com/theme/gourmet/img/dishes_3.jpg');
-            object-fit: cover;
-            background-position: center;
-            opacity: 0.7;
-            transition: width 1s, height 1s;
-            &:hover{
-                width: 33%;
-                height: 720px;
+            position: relative;
+            @include flex;
+             
+            .sekil{
+                width: 100%;
+                height: 700px;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+                
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 1s ease;
+                scale: 1;
+              
+
             }
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: black;
+                opacity: 0.5;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            &:hover img {
+                scale: 1.1;
+              
+            }
+        }
+             .yazi{
+                width: 70%;
+               // padding: 30px;
+               // background-color: blue;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-direction: column;
+               text-align: center;
+               gap: 20px;
+                position: absolute;
+                cursor: pointer;
+                color: $ag;
+                z-index: 2;
             h1 {
                 font-size: $font-basliq1;
-                color: $b-qara;
+                
             }
 
             h2 {
                 font-size: $font-basliq4;
-                color: $b-qara;
+                
             }
+             }
         }
     }
 }
@@ -319,76 +462,84 @@ main {
 
 .grid {
 
-   padding: 300px 0;
+    padding: 300px 0;
     width: 100%;
- 
- @include flex;
- gap: 100px;
-   
+
+    @include flex;
+    gap: 100px;
+    clip-path: polygon(0 8%, 100% 0%, 100% 90%, 0% 100%);
+    background-color: rgb(242, 236, 236);
 
     .div-a {
-      @include flex;
-gap: 20px;
-      @include xett;
+        @include flex;
+        gap: 20px;
+        @include xett;
 
         h1 {
             font-size: $font-basliq1;
         }
     }
 
-    
 
-         
-         .grid-a{
-            width: 67%;
-           
+
+
+    .grid-a {
+        width: 67%;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .grid-i {
+            width: 250px;
+            height: 250px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .grid-b {
+            width: 250px;
+            height: 250px;
             display: flex;
-            flex-wrap: wrap;
-            .grid-i{
-                width: 250px;
-                height: 250px;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
+            flex-direction: column;
+            gap: 10px;
+            padding: 30px;
+            background-color: $ag;
+
+            h3 {
+                font-size: $font-basliq3;
             }
-            .grid-b{
-                width: 250px;
-                height: 250px;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                padding: 30px;
-                h3{
-                    font-size: $font-basliq3;
-                }
-                p{
-                    font-size: $font-p;
-                    color: $color-p;
-                }
-                h1{
-                    font-size: $font-basliq4;
-                    color: $cho;
-                }
+
+            p {
+                font-size: $font-p;
+                color: $color-p;
             }
-         }
-    
+
+            h1 {
+                font-size: $font-basliq4;
+                color: $cho;
+            }
+        }
+    }
+
 }
 
 .container {
-    
+
     width: 100%;
     @include flex;
     gap: 100px;
-    padding: 300px 0;
+    padding: 160px 0;
 
     .con-a {
         width: 100%;
-        
+
         @include flex;
         gap: 20px;
-      @include xett;
+        @include xett;
 
         h1 {
             font-size: $font-basliq1;
@@ -397,7 +548,7 @@ gap: 20px;
     }
 
     .con-b {
-        
+
         width: 40%;
         @include flex;
         gap: 30px;
@@ -407,13 +558,13 @@ gap: 20px;
         }
 
         .ima {
-           
+
             width: 100%;
             display: flex;
             gap: 10px;
 
             .ima-1 {
-               
+
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;
@@ -429,7 +580,7 @@ gap: 20px;
 
             .ima-2 {
                 width: 150px;
-             
+
                 @include flex;
 
                 h1 {
@@ -441,16 +592,20 @@ gap: 20px;
 }
 
 .blog {
-   
+
     width: 100%;
     @include flex;
     padding: 300px 0;
     gap: 100px;
+    clip-path: polygon(0 8%, 100% 0%, 100% 90%, 0% 100%);
+
+    background-color: rgb(242, 236, 236);
+
 
     .blog-a {
-        
-     @include flex;
-     gap: 20px;
+
+        @include flex;
+        gap: 20px;
         @include xett;
 
         h1 {
@@ -460,7 +615,7 @@ gap: 20px;
 
     .blog-b {
         width: 100%;
-      
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -468,7 +623,7 @@ gap: 20px;
 
         .blog-1 {
             width: 35%;
-          
+
             @include flex;
 
             .ime1 {
@@ -484,28 +639,32 @@ gap: 20px;
 
             .ime2 {
                 padding: 30px;
-                
+
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                h1{
+
+                h1 {
                     font-size: $font-basliq3;
                     color: $cho;
                 }
-                .p1{
-                    color:$color-p;
+
+                .p1 {
+                    color: $color-p;
                     font-size: 15px;
                 }
-                p{
+
+                p {
                     font-size: $font-p;
                     color: $color-p;
                 }
             }
-            .but{
-                
+
+            .but {
+
                 width: 100px;
                 padding: 10px;
-                background-color:$cho ;
+                background-color: $cho ;
                 color: $ag;
                 font-size: 13px;
             }
@@ -514,170 +673,139 @@ gap: 20px;
 }
 
 
-.info{
+.info {
     width: 100%;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+   // gap: 10px;
     padding: 100px 0;
-    .info-a{
-       
+
+    .info-a {
+
         width: 70%;
-       display: flex;
-       gap: 37px;
-        .info1{
+        display: flex;
+        gap: 100px;
+
+        .info1 {
             width: 31%;
-            
-           display: flex;
-           flex-direction: column;
+
+            display: flex;
+            flex-direction: column;
             gap: 20px;
-            h3{
+
+            h3 {
                 font-size: $font-basliq2;
             }
-            p{
+
+            p {
                 font-size: $font-p;
                 color: $color-p;
 
             }
-            .p2{
+
+            .p2 {
                 font-size: 19px;
                 color: $b-qara;
             }
-           .p3{
-            a{
-                text-decoration: none;
-                color: $cho;
+
+            .p3 {
+                a {
+                    text-decoration: none;
+                    color: $cho;
+
+                    &:hover {
+                        color: brown;
+                    }
+                }
             }
-           }
         }
     }
 }
-footer{
+
+footer {
     width: 100%;
     padding: 60px 0;
     @include flex;
-    p{
+
+    p {
         font-size: $font-p;
         color: $color-p;
-        a{
+
+        a {
             text-decoration: none;
             color: $cho;
+
+            &:hover {
+                color: brown;
+            }
         }
     }
 }
-@media screen and (min-width:576px) and (max-width:1024px){
+
+@media screen and (min-width:576px) and (max-width:1024px) {
+    footer {
+        width: 100%;
+        
+    }
+}
+@media screen and (max-width:576px){
     footer{
         width: 100%;
+        padding: 0 10px;
     }
 }
-@media screen and (min-width:576px) and (max-width:1024px){
-    .info{
+
+@media screen and (min-width:576px) and (max-width:1024px) {
+    .info {
         width: 100%;
-        .info-a{
+
+        .info-a {
             width: 100%;
-            .info1{
+
+            .info1 {
                 width: 100%;
             }
         }
     }
 }
 
-@media screen and (max-width:576px){
+@media screen and (max-width:576px) {
 
-.info{
-    width: 100%;
-    .info-a{
+    .info {
         width: 100%;
-        flex-direction: column;
-        .info1{
-            width: 100%;
-        }
-    }
-}
 
-
-}
-@media screen and (min-width:576px) and (max-width:1024px){
-.blog{
-    width: 100%;
-    .blog-a{
-        width: 100%;
-    }
-    .blog-b{
-        width: 100%;
-        .blog-1{
-            width: 70%;
-        }
-    }
-}
-
-
-
-
-}
-@media screen and (max-width:576px){
-    .blog{
-        width: 100%;
-        .blog-a{
-            width: 100%;
-        }
-        .blog-b{
+        .info-a {
             width: 100%;
             flex-direction: column;
-            .blog-1{
+            padding: 0 10px;
+
+            .info1 {
                 width: 100%;
             }
         }
     }
-}
-
-@media screen and (min-width:576px) and (max-width:1024px){
-.container{
-    width: 100%;
-    .con-a{
-        width: 100%;
-    }
-    .con-b{
-        width: 100%;
-    }
-}
-
 
 
 }
-@media screen and (max-width:576px){
-    .container{
+
+@media screen and (min-width:576px) and (max-width:1024px) {
+    .blog {
         width: 100%;
-        .con-a{
+
+        .blog-a {
             width: 100%;
         }
-        .con-b{
+
+        .blog-b {
             width: 100%;
+
+            .blog-1 {
+                width: 70%;
+            }
         }
     }
-}
-
-@media screen and (min-width:576px) and (max-width:1024px){
-
-.grid{
-    width: 100%;
-    .div-a{
-        width: 100%;
-    }
-    .grid-a{
-        width: 70%;
-        flex-wrap: wrap;
-
-        .grid-b{
-            width: 35%;
-        }
-        .grid-i{
-            width: 35%;
-        }
-    }
-}
 
 
 
@@ -685,54 +813,141 @@ footer{
 }
 
 @media screen and (max-width:576px) {
-    .grid{
+    .blog {
         width: 100%;
 
-        .div-a{
+        .blog-a {
             width: 100%;
         }
-        .grid-a{
+
+        .blog-b {
             width: 100%;
-            
-        flex-wrap: wrap;
+            flex-direction: column;
+
+            .blog-1 {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:1024px) {
+    .container {
+        width: 100%;
+
+        .con-a {
+            width: 100%;
+        }
+
+        .con-b {
+            width: 100%;
+        }
+    }
+
+
+
+}
+
+@media screen and (max-width:576px) {
+    .container {
+        width: 100%;
+
+        .con-a {
+            width: 100%;
+        }
+
+        .con-b {
+            width: 100%;
+            padding: 0 10px;
+        }
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:1024px) {
+
+    .grid {
+        width: 100%;
+
+        .div-a {
+            width: 100%;
+        }
+
+        .grid-a {
+            width: 70%;
+            flex-wrap: wrap;
+
+            .grid-b {
+                width: 35%;
+            }
+
+            .grid-i {
+                width: 35%;
+            }
+        }
+    }
+
+
+
+
+}
+
+@media screen and (max-width:576px) {
+    .grid {
+        width: 100%;
+       // flex-direction: column;
+
+        .div-a {
+            width: 100%;
+        }
+
+        .grid-a {
+            width: 100%;
+            flex-direction: column;
+            //flex-wrap: wrap;
             gap: 30px;
-            .grid-b{
+            padding: 0 10px;
+
+            .grid-b {
                 width: 100%;
             }
-            .grid-i{
+
+            .grid-i {
                 width: 100%;
             }
         }
     }
 }
- 
 
 
-@media screen and (min-width:576px) and (max-width:1024px){
 
-    .menu{
+@media screen and (min-width:576px) and (max-width:1024px) {
+
+    .menu {
         width: 100%;
-        .menu-a{
+
+        .menu-a {
             width: 100%;
         }
-    
-        .menu-b{
-           
+
+        .menu-b {
+
             gap: 10px;
-    
-            .menu1{
+
+            .menu1 {
                 width: 30%;
             }
-            .menu1{
+
+            .menu1 {
                 width: 30%;
             }
-            .menu3{
+
+            .menu3 {
                 width: 30%;
             }
         }
     }
-    
-    
+
+
 
 
 }
@@ -740,64 +955,75 @@ footer{
 
 
 @media screen and (max-width:576px) {
-    .menu{
+    .menu {
         width: 100%;
-        .menu-a{
+
+        .menu-a {
             width: 100%;
         }
-        .menu-b{
-           
-        flex-direction: column;
-        gap: 30px;
-            .menu1{
+
+        .menu-b {
+
+            flex-direction: column;
+            gap: 30px;
+
+            .menu1 {
                 width: 100%;
             }
-            .menu2{display: none;}
-            .menu3{
+
+            .menu2 {
+                display: none;
+            }
+
+            .menu3 {
                 display: none;
             }
         }
     }
-    
-}
-
-@media screen and (min-width:576px) and (max-width:1024px){
-
-main{
-    width: 100%;
-    .main-a{
-        width: 50%;
-    }
-
-    .main-b{
-        flex-direction: column;
-        gap: 30px;
-
-        .main3{
-            width: 100%;
-
-            
-        }
-    }
-}
-
-
 
 }
 
+@media screen and (min-width:576px) and (max-width:1024px) {
 
-
-@media screen and (max-width:576px){
-    main{
+    main {
         width: 100%;
-        .main-a{
+
+        .main-a {
+            width: 50%;
+        }
+
+        .main-b {
+            flex-direction: column;
+            gap: 30px;
+
+            .main3 {
+                width: 100%;
+
+
+            }
+        }
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width:576px) {
+    main {
+        width: 100%;
+
+        .main-a {
             width: 100%;
         }
-        .main-b{
-           
-        flex-direction: column;
-        gap: 30px;
-            .main3{
+
+        .main-b {
+
+            flex-direction: column;
+            gap: 30px;
+
+            .main3 {
                 width: 100%;
             }
         }

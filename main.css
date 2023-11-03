@@ -7,11 +7,13 @@
 header {
   background-image: url("https://g.foolcdn.com/editorial/images/457552/salmon_salad.jpg");
   background-size: cover;
+  background-position: center;
   width: 100%;
   background-color: black;
   color: white;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+  background-color: rgb(242, 236, 236);
 }
 header nav {
   display: flex;
@@ -31,7 +33,7 @@ header nav ul {
   gap: 20px;
 }
 header nav ul li {
-  font-size: 17px;
+  font-size: 19px;
   color: white;
   cursor: pointer;
 }
@@ -52,7 +54,7 @@ header .head {
   flex-direction: column;
 }
 header .head .food {
-  width: 50%;
+  width: 40%;
   padding: 300px 0;
   display: flex;
   justify-content: center;
@@ -70,9 +72,15 @@ header .head .food .start {
   border: 2px solid white;
   cursor: pointer;
 }
+header .head .food .start:hover {
+  background-color: white;
+}
 header .head .food .start a {
   text-decoration: none;
   color: white;
+}
+header .head .food .start a:hover {
+  color: black;
 }
 
 section {
@@ -82,8 +90,10 @@ section {
   justify-content: center;
   align-items: center;
   gap: 150px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  margin-top: -200px;
+  -webkit-clip-path: polygon(0 14%, 100% 0%, 100% 85%, 0% 100%);
+          clip-path: polygon(0 14%, 100% 0%, 100% 85%, 0% 100%);
+  background-color: rgb(242, 236, 236);
 }
 section .sec-a {
   width: 40%;
@@ -113,7 +123,7 @@ section .sec-b h1 {
 }
 section .sec-b p {
   font-size: 17px;
-  color: rgb(190, 186, 186);
+  color: rgb(163, 162, 162);
 }
 section .sec-b .imge {
   width: 100px;
@@ -128,7 +138,7 @@ section .sec-b .imge img {
 
 main {
   width: 100%;
-  padding: 300px 0;
+  padding: 150px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,7 +164,7 @@ main .main-a h1 {
 }
 main .main-a p {
   font-size: 17px;
-  color: rgb(190, 186, 186);
+  color: rgb(163, 162, 162);
 }
 main .main-b {
   width: 80%;
@@ -179,7 +189,7 @@ main .main-b .main3 img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 300px 0;
+  padding: 200px 0;
   gap: 100px;
 }
 .menu .menu-a {
@@ -206,82 +216,169 @@ main .main-b .main3 img {
   gap: 10px;
 }
 .menu .menu-b .menu1 {
+  width: 32%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 32%;
+}
+.menu .menu-b .menu1 .sekil {
+  width: 100%;
   height: 700px;
-  background-image: url("https://preview.colorlib.com/theme/gourmet/img/dishes_2.jpg");
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.menu .menu-b .menu1 .sekil img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background-position: center;
-  opacity: 0.7;
-  transition: width 1s, height 1s;
+  transition: all 1s ease;
+  scale: 1;
 }
-.menu .menu-b .menu1:hover {
-  width: 33%;
-  height: 720px;
+.menu .menu-b .menu1 .sekil::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
-.menu .menu-b .menu1 h1 {
+.menu .menu-b .menu1 .sekil:hover img {
+  scale: 1.1;
+}
+.menu .menu-b .menu1 .yazi {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  z-index: 2;
+}
+.menu .menu-b .menu1 .yazi h1 {
   font-size: 50px;
-  color: black;
 }
-.menu .menu-b .menu1 h2 {
+.menu .menu-b .menu1 .yazi h2 {
   font-size: 30px;
-  color: black;
 }
 .menu .menu-b .menu2 {
+  width: 32%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 32%;
+}
+.menu .menu-b .menu2 .sekil {
+  width: 100%;
   height: 700px;
-  background-image: url("https://preview.colorlib.com/theme/gourmet/img/dishes_1.jpg");
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.menu .menu-b .menu2 .sekil img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background-position: center;
-  opacity: 0.7;
-  transition: width 1s, height 1s;
+  transition: all 1s ease;
+  scale: 1;
 }
-.menu .menu-b .menu2:hover {
-  width: 33%;
-  height: 720px;
+.menu .menu-b .menu2 .sekil::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
-.menu .menu-b .menu2 h1 {
+.menu .menu-b .menu2 .sekil:hover img {
+  scale: 1.1;
+}
+.menu .menu-b .menu2 .yazi {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  z-index: 2;
+}
+.menu .menu-b .menu2 .yazi h1 {
   font-size: 50px;
-  color: black;
 }
-.menu .menu-b .menu2 h2 {
+.menu .menu-b .menu2 .yazi h2 {
   font-size: 30px;
-  color: black;
 }
 .menu .menu-b .menu3 {
+  width: 32%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 32%;
+}
+.menu .menu-b .menu3 .sekil {
+  width: 100%;
   height: 700px;
-  background-image: url("https://preview.colorlib.com/theme/gourmet/img/dishes_3.jpg");
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.menu .menu-b .menu3 .sekil img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background-position: center;
-  opacity: 0.7;
-  transition: width 1s, height 1s;
+  transition: all 1s ease;
+  scale: 1;
 }
-.menu .menu-b .menu3:hover {
-  width: 33%;
-  height: 720px;
+.menu .menu-b .menu3 .sekil::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
-.menu .menu-b .menu3 h1 {
+.menu .menu-b .menu3 .sekil:hover img {
+  scale: 1.1;
+}
+.menu .menu-b .menu3 .yazi {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  z-index: 2;
+}
+.menu .menu-b .menu3 .yazi h1 {
   font-size: 50px;
-  color: black;
 }
-.menu .menu-b .menu3 h2 {
+.menu .menu-b .menu3 .yazi h2 {
   font-size: 30px;
-  color: black;
 }
 
 .grid {
@@ -292,6 +389,9 @@ main .main-b .main3 img {
   align-items: center;
   flex-direction: column;
   gap: 100px;
+  -webkit-clip-path: polygon(0 8%, 100% 0%, 100% 90%, 0% 100%);
+          clip-path: polygon(0 8%, 100% 0%, 100% 90%, 0% 100%);
+  background-color: rgb(242, 236, 236);
 }
 .grid .div-a {
   display: flex;
@@ -330,13 +430,14 @@ main .main-b .main3 img {
   flex-direction: column;
   gap: 10px;
   padding: 30px;
+  background-color: white;
 }
 .grid .grid-a .grid-b h3 {
   font-size: 21px;
 }
 .grid .grid-a .grid-b p {
   font-size: 17px;
-  color: rgb(190, 186, 186);
+  color: rgb(163, 162, 162);
 }
 .grid .grid-a .grid-b h1 {
   font-size: 30px;
@@ -350,7 +451,7 @@ main .main-b .main3 img {
   align-items: center;
   flex-direction: column;
   gap: 100px;
-  padding: 300px 0;
+  padding: 160px 0;
 }
 .container .con-a {
   width: 100%;
@@ -415,6 +516,9 @@ main .main-b .main3 img {
   flex-direction: column;
   padding: 300px 0;
   gap: 100px;
+  -webkit-clip-path: polygon(0 8%, 100% 0%, 100% 90%, 0% 100%);
+          clip-path: polygon(0 8%, 100% 0%, 100% 90%, 0% 100%);
+  background-color: rgb(242, 236, 236);
 }
 .blog .blog-a {
   display: flex;
@@ -466,12 +570,12 @@ main .main-b .main3 img {
   color: chocolate;
 }
 .blog .blog-b .blog-1 .ime2 .p1 {
-  color: rgb(190, 186, 186);
+  color: rgb(163, 162, 162);
   font-size: 15px;
 }
 .blog .blog-b .blog-1 .ime2 p {
   font-size: 17px;
-  color: rgb(190, 186, 186);
+  color: rgb(163, 162, 162);
 }
 .blog .blog-b .blog-1 .but {
   width: 100px;
@@ -486,13 +590,12 @@ main .main-b .main3 img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   padding: 100px 0;
 }
 .info .info-a {
   width: 70%;
   display: flex;
-  gap: 37px;
+  gap: 100px;
 }
 .info .info-a .info1 {
   width: 31%;
@@ -505,7 +608,7 @@ main .main-b .main3 img {
 }
 .info .info-a .info1 p {
   font-size: 17px;
-  color: rgb(190, 186, 186);
+  color: rgb(163, 162, 162);
 }
 .info .info-a .info1 .p2 {
   font-size: 19px;
@@ -514,6 +617,9 @@ main .main-b .main3 img {
 .info .info-a .info1 .p3 a {
   text-decoration: none;
   color: chocolate;
+}
+.info .info-a .info1 .p3 a:hover {
+  color: brown;
 }
 
 footer {
@@ -526,16 +632,25 @@ footer {
 }
 footer p {
   font-size: 17px;
-  color: rgb(190, 186, 186);
+  color: rgb(163, 162, 162);
 }
 footer p a {
   text-decoration: none;
   color: chocolate;
 }
+footer p a:hover {
+  color: brown;
+}
 
 @media screen and (min-width: 576px) and (max-width: 1024px) {
   footer {
     width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  footer {
+    width: 100%;
+    padding: 0 10px;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 1024px) {
@@ -556,6 +671,7 @@ footer p a {
   .info .info-a {
     width: 100%;
     flex-direction: column;
+    padding: 0 10px;
   }
   .info .info-a .info1 {
     width: 100%;
@@ -610,6 +726,7 @@ footer p a {
   }
   .container .con-b {
     width: 100%;
+    padding: 0 10px;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 1024px) {
@@ -639,8 +756,9 @@ footer p a {
   }
   .grid .grid-a {
     width: 100%;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 30px;
+    padding: 0 10px;
   }
   .grid .grid-a .grid-b {
     width: 100%;
